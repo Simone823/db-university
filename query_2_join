@@ -1,0 +1,7 @@
+2. Selezionare tutti i Corsi di Laurea del Dipartimento di Neuroscienze
+
+SELECT `courses`.`id`,`courses`.`name`, `courses`.`website`, departments.name AS `nome_dipartimento`
+FROM `courses`
+INNER JOIN `departments`
+ON `departments`.`id` = `courses`.`degree_id`
+WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'
